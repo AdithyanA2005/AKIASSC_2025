@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function AboutSection() {
   return (
-    <section className="container mx-auto px-4 py-24">
+    <section className="container mx-auto px-4 py-24" id="about">
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -31,24 +31,41 @@ export function AboutSection() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
+            {/* Outer Glow Effect */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 via-purple-400/20 to-purple-500/20 rounded-[3rem] blur-2xl"></div>
+
+            {/* Main Image Container */}
             <div className="relative w-full h-[500px] rounded-[2rem] overflow-hidden">
-              {/* Glassmorphic Overlay */}
+              {/* Multiple Layer Glassmorphic Overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-purple-950/20 backdrop-blur-sm"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent"></div>
               <div className="absolute inset-0 bg-white/5 border border-white/10"></div>
 
-              {/* Image */}
-              <Image
-                src="/college.png"
-                alt="College Campus"
-                fill
-                className="object-cover"
-                priority
-              />
+              {/* Inner Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-radial from-purple-500/20 via-transparent to-transparent opacity-50"></div>
+
+              {/* Image with Enhanced Effects */}
+              <div className="relative w-full h-full">
+                <Image
+                  src="/college.jpg"
+                  alt="College Campus"
+                  fill
+                  className="object-cover transform hover:scale-105 transition-transform duration-700"
+                  priority
+                />
+                {/* Image Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 via-purple-900/10 to-transparent"></div>
+              </div>
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-purple-500/20 rounded-full blur-xl"></div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-400/20 rounded-full blur-xl"></div>
+            <div className="absolute -top-8 -right-8 w-40 h-40 bg-purple-500/20 rounded-full blur-2xl animate-pulse"></div>
+            <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-purple-400/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+
+            {/* Corner Accents */}
+            <div className="absolute -top-4 -right-4 w-8 h-8 border-t-2 border-r-2 border-purple-400/50 rounded-tr-lg"></div>
+            <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-purple-400/50 rounded-bl-lg"></div>
           </motion.div>
 
           {/* Text Content */}
