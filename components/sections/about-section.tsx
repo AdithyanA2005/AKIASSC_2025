@@ -35,7 +35,7 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
             <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 via-purple-400/20 to-purple-500/20 rounded-[3rem] blur-2xl"></div>
 
             {/* Main Image Container */}
-            <div className="relative w-full h-[500px] rounded-[2rem] overflow-hidden">
+            <div className="relative w-full h-[300px] lg:h-[600px] rounded-[2rem] overflow-hidden">
               {/* Multiple Layer Glassmorphic Overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-purple-950/20 backdrop-blur-sm"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent"></div>
