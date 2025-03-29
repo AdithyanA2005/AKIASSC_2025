@@ -88,17 +88,6 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
               </p>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <p className="text-gray-300 text-lg leading-relaxed">
-                Through informative sessions, workshops, and interactions,
-                participants gain insights into technological innovations and
-                explore potential career paths. AKIASSC aims to enhance
-                students' technical and professional skills, equipping them with
-                the knowledge and connections necessary to succeed in the
-                dynamic field of industrial applications.
-              </p>
-            </div>
-
             {/* Key Features */}
             <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
