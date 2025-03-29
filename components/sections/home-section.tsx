@@ -74,19 +74,19 @@ export function HomeSection({
             className="mb-4 relative"
           >
             {/* Main logo */}
-            <div className="relative z-10 w-[350px] h-[350px] mx-auto flex items-center justify-center">
+            <div className="relative z-10 w-[300px] h-[300px] md:w-[350px] md:h-[350px] mx-auto flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-purple-950/20 rounded-[3rem] blur-2xl"></div>
               <Image
                 src="/logo.png"
                 alt="Logo"
-                width={450}
-                height={450}
+                width={1174}
+                height={479}
                 className="w-[120%] h-[120%] object-contain relative z-10 -translate-y-8"
               />
             </div>
           </motion.div>
 
-          <div className="text-4xl md:text-6xl font-light mb-6 -mt-24 text-center">
+          <div className="text-5xl md:text-6xl font-light mb-6 -mt-24 text-center">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -145,7 +145,7 @@ export function HomeSection({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.5 }}
-            className="text-xl text-gray-300 mb-16 max-w-2xl mx-auto text-center"
+            className="text-xl text-gray-300 mb-16 max-w-[80%] md:max-w-2xl mx-auto text-center "
           >
             Join us in shaping the future of technology and innovation
           </motion.p>
