@@ -24,12 +24,12 @@ export function HomeSection({ sectionId }: { sectionId: string }) {
         {[...Array(50)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-3 h-3 bg-purple-500/30 rounded-full"
+            className="absolute w-3 h-3 bg-purple-500/40 rounded-full"
             initial={{
               x: Math.random() * 100 + "vw",
               y: Math.random() * 100 + "vh",
-              scale: 0,
-              opacity: 0,
+              scale: 0.5,
+              opacity: 0.3,
             }}
             animate={{
               x: [
@@ -42,14 +42,14 @@ export function HomeSection({ sectionId }: { sectionId: string }) {
                 Math.random() * 100 + "vh",
                 Math.random() * 100 + "vh",
               ],
-              scale: [0, 1, 0],
-              opacity: [0, 0.6, 0],
+              scale: [0.5, 1, 0.5],
+              opacity: [0.3, 0.6, 0.3],
             }}
             transition={{
-              duration: Math.random() * 15 + 15,
+              duration: Math.random() * 10 + 10,
               repeat: Infinity,
               ease: "linear",
-              delay: Math.random() * 5,
+              delay: Math.random() * 2,
               times: [0, 0.5, 1],
             }}
           />
