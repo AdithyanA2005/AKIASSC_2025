@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Header } from "@/components/Header";
+import { Header } from "@/components/header";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
