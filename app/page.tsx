@@ -6,7 +6,10 @@ import { ELandingSections } from "@/lib/enum";
 export default function Home() {
   return (
     <main>
-      <HomeSection sectionId={ELandingSections.HOME} />
+      <HomeSection
+        sectionId={ELandingSections.HOME}
+        goToSectionId={ELandingSections.ABOUT}
+      />
       <AboutSection sectionId={ELandingSections.ABOUT} />
       <CountdownSection sectionId={ELandingSections.COUNTDOWN} />
     </main>

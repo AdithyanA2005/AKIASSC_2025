@@ -4,8 +4,15 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
-export function HomeSection({ sectionId }: { sectionId: string }) {
+export function HomeSection({
+  sectionId,
+  goToSectionId,
+}: {
+  sectionId: string;
+  goToSectionId: string;
+}) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -146,9 +153,12 @@ export function HomeSection({ sectionId }: { sectionId: string }) {
           {/* Circle with down arrow */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
             <div className="w-full h-[200px] absolute -top-[100px] bg-gradient-radial from-purple-500/30 to-transparent rounded-[100%] blur-md"></div>
-            <button className="relative z-10 w-16 h-16 mx-auto bg-purple-900/50 rounded-full flex items-center justify-center border border-purple-500/30 shadow-[0_0_20px_rgba(149,76,233,0.5)] hover:bg-purple-900/70 transition-colors">
+            <Link
+              href={`#${goToSectionId}`}
+              className="relative z-10 w-16 h-16 mx-auto bg-purple-900/50 rounded-full flex items-center justify-center border border-purple-500/30 shadow-[0_0_20px_rgba(149,76,233,0.5)] hover:bg-purple-900/70 transition-colors"
+            >
               <ChevronDown className="text-white w-8 h-8" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
