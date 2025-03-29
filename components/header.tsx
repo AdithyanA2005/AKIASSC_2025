@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
 import Image from "next/image";
+import { ELandingSections } from "@/lib/enum";
 
 export function Header() {
   return (
@@ -13,20 +13,32 @@ export function Header() {
         </div>
 
         <div className="hidden md:flex space-x-6">
-          <Link href="#" className="text-white hover:text-purple-300">
+          <Link
+            href={`#${ELandingSections.HOME}`}
+            className="text-white hover:text-purple-300"
+          >
             Home
           </Link>
-          <Link href="#" className="text-white hover:text-purple-300">
+          <Link
+            href={`#${ELandingSections.ABOUT}`}
+            className="text-white hover:text-purple-300"
+          >
             About
           </Link>
-          <Link href="#" className="text-white hover:text-purple-300">
-            Contact
+          <Link
+            href={`#${ELandingSections.COUNTDOWN}`}
+            className="text-white hover:text-purple-300"
+          >
+            Countdown
           </Link>
         </div>
 
-        <Button className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white rounded-full px-6">
+        <Link
+          href={`#${ELandingSections.COUNTDOWN}`}
+          className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white rounded-full px-6 py-1.5"
+        >
           Get Started
-        </Button>
+        </Link>
       </nav>
     </header>
   );

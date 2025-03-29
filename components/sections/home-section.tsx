@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 
-export function HomeSection() {
+export function HomeSection({ sectionId }: { sectionId: string }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -15,7 +15,10 @@ export function HomeSection() {
   if (!mounted) return null;
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section
+      className="relative min-h-screen w-full overflow-hidden"
+      id={sectionId}
+    >
       {/* Particle Background */}
       <div className="fixed inset-0 w-full h-full">
         {[...Array(50)].map((_, i) => (

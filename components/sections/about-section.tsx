@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export function AboutSection() {
+export function AboutSection({ sectionId }: { sectionId: string }) {
   return (
-    <section className="container mx-auto px-4 py-24" id="about">
+    <section className="container mx-auto px-4 py-24" id={sectionId}>
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <motion.div

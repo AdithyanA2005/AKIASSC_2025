@@ -10,7 +10,7 @@ interface TimeLeft {
   seconds: number;
 }
 
-export function CountdownSection() {
+export function CountdownSection({ sectionId }: { sectionId: string }) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -54,7 +54,10 @@ export function CountdownSection() {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      id={sectionId}
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0e0420] to-[#1a0836]"></div>
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
