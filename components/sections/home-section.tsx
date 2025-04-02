@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export function HomeSection({
   sectionId,
@@ -145,10 +146,45 @@ export function HomeSection({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.5 }}
-            className="text-xl text-gray-300 mb-16 max-w-[80%] md:max-w-2xl mx-auto text-center "
+            className="text-xl text-gray-300 mb-8 max-w-[80%] md:max-w-2xl mx-auto text-center "
           >
             Join us in shaping the future of technology and innovation
           </motion.p>
+
+          {/* Fancy Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.8, duration: 0.5 }}
+            className="flex justify-center mb-16"
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative"
+            >
+              {/* Button glow effect */}
+              <motion.div 
+                className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-400 rounded-xl blur-lg"
+                initial={{ opacity: 0.4, scale: 1 }}
+                animate={{ opacity: 0.4, scale: 1 }}
+                transition={{ 
+                  opacity: { duration: 0.3 },
+                  scale: { duration: 0.3 }
+                }}
+              />
+              
+              <Button
+                className="relative z-10 px-8 py-6 h-3 w-auto text-lg font-medium bg-gradient-to-r from-purple-900/80 to-purple-700/80 hover:from-purple-800/90 hover:to-purple-600/90 border border-purple-400/30 backdrop-blur-md rounded-xl shadow-[0_0_15px_rgba(160,90,255,0.5)] transition-all duration-300"
+                onClick={() => {}}
+              >
+                <span className="mr-2">
+                  <Sparkles className="w-5 h-5 text-purple-300" />
+                </span>
+                Buy Tickets
+              </Button>
+            </motion.div>
+          </motion.div>
 
           {/* Circle with down arrow */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
