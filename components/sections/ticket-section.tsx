@@ -1,12 +1,12 @@
-
+import { LazySection } from "@/components/lazy-section";
 
 export default function TicketSection({ sectionId }: { sectionId: string }) {
   return (
-    <section
+    <LazySection
       id={sectionId}
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      
-    </section>
+      <div></div>
+    </LazySection>
   );
 }

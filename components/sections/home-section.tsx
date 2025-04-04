@@ -6,6 +6,7 @@ import { ChevronDown, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { LazySection } from "@/components/lazy-section";
 
 export function HomeSection({
   sectionId,
@@ -23,9 +24,10 @@ export function HomeSection({
   if (!mounted) return null;
 
   return (
-    <section
+    <LazySection 
+      id={sectionId} 
       className="relative min-h-screen w-full overflow-hidden"
-      id={sectionId}
+      placeholderHeight="100vh"
     >
       {/* Particle Background */}
       <div className="fixed inset-0 w-full h-full">
@@ -198,6 +200,6 @@ export function HomeSection({
           </div>
         </div>
       </div>
-    </section>
+    </LazySection>
   );
 }

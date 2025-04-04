@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { useState } from "react";
+import { LazySection } from "@/components/lazy-section";
 
 export function AboutSection({ sectionId }: { sectionId: string }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -35,7 +36,10 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
   };
 
   return (
-    <section className="container mx-auto px-4 py-24" id={sectionId}>
+    <LazySection
+      id={sectionId}
+      className="container mx-auto px-4 py-24"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -176,6 +180,6 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
           ))}
         </div>
       </div>
-    </section>
+    </LazySection>
   );
 }
