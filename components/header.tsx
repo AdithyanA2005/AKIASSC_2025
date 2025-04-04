@@ -26,6 +26,12 @@ export function Header() {
             About
           </Link>
           <Link
+           href={`#${ELandingSections.EVENTS}`}
+           className="text-white hover:text-purple-300"
+          >
+            Events
+          </Link>
+          <Link
             href={`#${ELandingSections.COUNTDOWN}`}
             className="text-white hover:text-purple-300"
           >

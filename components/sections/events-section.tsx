@@ -119,11 +119,8 @@ export default function EventsSection({sectionId}: {sectionId: string}) {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
-            Exciting Events
+             Event Programs
           </h2>
-          <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
-            Explore our lineup of transformative events designed to inspire, educate, and connect.
-          </p>
           <div className="w-24 h-1 bg-purple-500 mx-auto rounded-full mt-6"></div>
         </motion.div>
         
