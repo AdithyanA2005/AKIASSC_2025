@@ -24,6 +24,11 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
       title: "About UKFCET",
       image: "/college.jpg",
       content: "UKF College of Engineering and Technology excels in technical education with state-of-the-art facilities and experienced faculty. The college offers diverse engineering programs that blend theoretical knowledge with practical skills. UKFCET's focus on holistic development and innovation prepares graduates to address real-world challenges and advance in technological fields."
+    },
+    {
+      title: "About IEEE SB UKFCET",
+      image: "/college.jpg",
+      content: "IEEE Student Branch at UKF College of Engineering and Technology (UKFCET), established in 2016, promotes technological innovation and student development through events, workshops, and lectures. It actively engages in IEEE activities, recently hosting major programs like the All Kerala IAS Student Conclave (AKIASSC) 2025. The branch stays connected with students via platforms like Instagram and LinkedIn."
     }
   ];
 
