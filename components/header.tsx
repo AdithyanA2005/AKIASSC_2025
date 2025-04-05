@@ -34,6 +34,7 @@ export function Header() {
           <Link
             href={`#${ELandingSections.TICKET}`}
           >
+            Ticket
           </Link>
           <Link
             href={`#${ELandingSections.COUNTDOWN}`}
