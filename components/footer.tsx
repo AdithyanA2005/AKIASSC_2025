@@ -6,7 +6,6 @@ export function Footer() {
     {
       name: "IEEE SB UKFCET",
       links: [
-        { platform: "Facebook", url: "https://facebook.com/ieeesbukfcet", icon: Facebook },
         { platform: "Instagram", url: "https://instagram.com/ieee_sb_ukfcet", icon: Instagram },
         { platform: "LinkedIn", url: "https://linkedin.com/company/ieeesbukfcet/", icon: Linkedin },
       ],
@@ -14,23 +13,22 @@ export function Footer() {
     {
       name: "IEEE Kerala Joint Chapter",
       links: [
-        { platform: "Facebook", url: "https://facebook.com/ieeekeralajointchapter", icon: Facebook },
-        { platform: "Instagram", url: "https://instagram.com/ieeekeralajointchapter", icon: Instagram },
-        { platform: "Twitter", url: "https://twitter.com/ieeekerala", icon: Twitter },
+        { platform: "Instagram", url: "https://www.instagram.com/ieeeiaiepelskerala/", icon: Instagram },
+        { platform: "LinkedIn", url: "https://www.linkedin.com/company/ieeeiaiepelskerala/", icon: Twitter },
       ],
     },
     {
       name: "AKIASSC",
       links: [
         { platform: "Instagram", url: "https://instagram.com/akiassc", icon: Instagram },
-        { platform: "LinkedIn", url: "https://linkedin.com/in/akiassc", icon: Linkedin },
+        { platform: "LinkedIn", url: "https://www.linkedin.com/in/all-kerala-industry-applications-soceity-students-conclave-917061317/", icon: Linkedin },
       ],
     },
     {
       name: "IAS SBC UKFCET",
       links: [
-        { platform: "Facebook", url: "https://facebook.com/iassbcukfcet", icon: Facebook },
-        { platform: "Instagram", url: "https://instagram.com/iassbcukfcet", icon: Instagram },
+        { platform: "Instagram", url: "https://www.instagram.com/ias_sbc_ukfcet", icon: Facebook },
+        // { platform: "Instagram", url: "https://instagram.com/iassbcukfcet", icon: Instagram },
       ],
     },
   ];

@@ -10,13 +10,13 @@ interface CommitteeMember {
 }
 
 const committeeMembers: CommitteeMember[] = [
-  { id: 1, name: "Ananthu MS", delegation: "IAS SBC UKFCET Chairperson", image: "/committee/ananthu.jpg" },
-  { id: 2, name: "Jishnu H", delegation: "IEEE SB UKFCET Chairperson", image: "/committee/jishnu.jpg" },
-  { id: 3, name: "Archa R", delegation: "IEEE SB UKFCET Vice-Chairperson", image: "/committee/archa.jpg" },
-  { id: 4, name: "Kaveri KR", delegation: "WIE SBC UKFCET Chairperson", image: "/committee/kaveri.jpg"},
-  { id: 5, name: "Abhijith MS", delegation: "ComSoc SBC UKFCET Chairperson", image: "/committee/abhijith.jpg" },
-  { id: 6, name: "Abel Sebastian", delegation: "IEEE SB UKFCET Vice-Secretary", image: "/committee/abel.jpg" },
+  { id: 1, name: "Jishnu H", delegation: "IEEE SB UKFCET Chairperson", image: "/committee/jishnu.jpg" },
+  { id: 2, name: "Archa R", delegation: "IEEE SB UKFCET Vice-Chairperson", image: "/committee/archa.jpg" },
+  { id: 3, name: "Ananthu MS", delegation: "IAS SBC UKFCET Chairperson", image: "/committee/ananthu.jpg" },
+  { id: 4, name: "Abhijith MS", delegation: "ComSoc SBC UKFCET Chairperson", image: "/committee/abhijith.jpg" },
+  { id: 5, name: "Kaveri KR", delegation: "WIE SBC UKFCET Chairperson", image: "/committee/kaveri.jpg"},
   { id: 7, name: "Aparna S", delegation: "IEEE SB UKFCET Secretary", image: "/committee/aparna.jpg" },
+  { id: 6, name: "Abel Sebastian", delegation: "IEEE SB UKFCET Vice-Secretary", image: "/committee/abel.jpg" },
   { id: 8, name: "David William", delegation: "IAS SBC Treasurer", image: "/committee/david.jpg" },
   
 
