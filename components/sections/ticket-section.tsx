@@ -2,6 +2,7 @@
 import { LazySection } from "@/components/lazy-section";
 import Image from "next/image";
 import { useState } from "react";
+import { Phone } from "lucide-react";
 
 export default function TicketSection({ sectionId }: { sectionId: string }) {
   const tickets = [
@@ -25,6 +26,13 @@ export default function TicketSection({ sectionId }: { sectionId: string }) {
     const taxes = price * taxRate;
     return price + taxes + platformFee;
   };
+
+  // Contact information
+  const contacts = [
+    { name: "Dr. Reshmi", phone: "7034453360" },
+    { name: "Jishnu H", phone: "7907187103" },
+    { name: "Ananthu MS", phone: "9895753014" },
+  ];
 
   return (
     <LazySection
@@ -109,10 +117,39 @@ export default function TicketSection({ sectionId }: { sectionId: string }) {
           </table>
         </div>
       </div>
-      {/* <div className="text-center text-sm text-gray-400 mt-4">
-        Taxes and platform fees not included. Earlybird offer currently
-        available.
-      </div> */}
+      
+      {/* Contact Us Section */}
+      <div className="mt-8 mb-4 max-w-2xl w-full">
+        <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
+          Contact Us
+        </h3>
+        
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-lg">
+          <p className="text-center text-gray-300 mb-6">
+            If you encounter any issues with registration or have questions, please contact:
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {contacts.map((contact, index) => (
+              <div 
+                key={index} 
+                className="flex flex-col items-center p-4 rounded-xl bg-purple-900/20 border border-purple-400/20 backdrop-blur-sm transition-all duration-300 hover:bg-purple-900/30 hover:border-purple-400/30"
+              >
+                <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center mb-3">
+                  <Phone className="w-5 h-5 text-purple-300" />
+                </div>
+                <h4 className="text-white font-medium">{contact.name}</h4>
+                <a 
+                  href={`tel:${contact.phone}`} 
+                  className="text-purple-300 hover:text-purple-200 mt-1"
+                >
+                  {contact.phone}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </LazySection>
   );
 }
