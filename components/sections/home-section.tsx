@@ -178,7 +178,7 @@ export function HomeSection({
               
               <Button
                 className="relative z-10 px-8 py-6 h-3 w-auto text-lg font-medium bg-gradient-to-r from-purple-900/80 to-purple-700/80 hover:from-purple-800/90 hover:to-purple-600/90 border border-purple-400/30 backdrop-blur-md rounded-xl shadow-[0_0_15px_rgba(160,90,255,0.5)] transition-all duration-300"
-                onClick={() => {}}
+                onClick={() => {window.open("https://makemypass.com/event/akiassc25", "_blank")}}
               >
                 <span className="mr-2">
                   <Sparkles className="w-5 h-5 text-purple-300" />
