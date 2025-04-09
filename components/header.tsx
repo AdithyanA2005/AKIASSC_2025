@@ -41,10 +41,16 @@ export function Header() {
             Events
           </Link>
           <Link
+            href={`#${ELandingSections.COMMITTEE}`}
+            className="text-white hover:text-purple-300"
+          >
+            Committee
+          </Link>
+          <Link
             href={`#${ELandingSections.TICKET}`}
             className="text-white hover:text-purple-300"
           >
-            Ticket
+            Registration
           </Link>
           <Link
             href={`#${ELandingSections.COUNTDOWN}`}
@@ -147,7 +153,7 @@ export function Header() {
                   className="text-white hover:text-purple-300 block py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Ticket
+                  Registration
                 </Link>
               </motion.div>
               
