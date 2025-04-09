@@ -142,6 +142,20 @@ export function Header() {
                   Events
                 </Link>
               </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+              >
+                <Link
+                  href={`#${ELandingSections.COMMITTEE}`}
+                  className="text-white hover:text-purple-300 block py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Committe
+                </Link>
+              </motion.div>
               
               <motion.div
                 initial={{ opacity: 0, x: -10 }}
