@@ -150,7 +150,7 @@ export function HomeSection({
             transition={{ delay: 1.5, duration: 0.5 }}
             className="text-xl text-gray-300 mb-8 max-w-[80%] md:max-w-2xl mx-auto text-center "
           >
-            Join us in shaping the future of technology and innovation
+            Join us in shaping the future of technology and innovation on July 11,12 and 13, 2025.
           </motion.p>
 
           {/* Fancy Button */}
