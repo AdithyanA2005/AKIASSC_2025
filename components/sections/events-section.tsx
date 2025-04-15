@@ -17,7 +17,7 @@ const events = [
   },
   {
     id: "hackathon",
-    title: "24-Hour Hackathon",
+    title: "12-Hour Hackathon",
     description: "Collaborative coding marathon to solve real-world problems.",
     image: "/hackathon.avif"
   },
