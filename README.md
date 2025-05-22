@@ -34,3 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Change Log
+
+### Changes made by Abel
+
+- Added a new Activities page under `/activities` to display IEEE SB UKFCET events with image gallery and modal popup for details.
+- Implemented responsive grid layout and modal using shadcn/ui dialog.
+- Ensured the activities page content starts below the fixed navigation bar.
+- Made the footer always stick to the bottom of the page.
+- Duplicated the sample event to show at least 7 items with a 4:5 aspect ratio for each card.
+- Added an 'Activities' link to both desktop and mobile navigation menus.
