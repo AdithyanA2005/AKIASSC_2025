@@ -24,8 +24,7 @@ export function Header() {
         </div>
 
         {/* Desktop navigation links */}
-        <div className="hidden md:flex items-center space-x-8 order-2">
-          <Link href="/activities" className="text-white hover:text-purple-300 text-lg font-semibold">Activities</Link>
+        <div className="hidden md:flex items-center space-x-6 order-2">
           <div className="flex items-center space-x-6">
             <Image src="/ieee-logo.png" alt="IEEE Logo" width={90} height={45} priority className="h-[40px] w-auto" />
             <Image src="/ukf-ieee.png" alt="UKF IEEE Logo" width={90} height={65} priority className="h-[60px] w-auto" />
@@ -87,19 +86,6 @@ export function Header() {
             transition={{ duration: 0.3 }}
           >
             <div className="py-6 px-8 flex flex-col space-y-4">
-              <motion.div
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.05 }}
-              >
-                <Link
-                  href="/activities"
-                  className="text-white hover:text-purple-300 block py-2 text-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Activities
-                </Link>
-              </motion.div>
               
               <motion.div
                 initial={{ opacity: 0, x: 10 }}
@@ -140,6 +126,20 @@ export function Header() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Events
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.05 }}
+              >
+                <Link
+                  href="/activities"
+                  className="text-white hover:text-purple-300 block py-2 text-lg"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Activities
                 </Link>
               </motion.div>
 
