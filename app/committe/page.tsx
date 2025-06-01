@@ -26,9 +26,12 @@ const committeeMembers: CommitteeMember[] = [
   { id: 15, name: "Mr. Akhil J Babu", delegation: "Chairman, Food Committee" },
 ];
 
-export default function CommitteeMembersSection({ sectionId }: { sectionId: string }) {
+export default function CommitteeMembersPage({ sectionId }: { sectionId: string }) {
   return (
-    <div>
+    <div
+      id={sectionId}
+      className="min-h-screen py-24 relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#1a0836] to-[#0e0420]"></div>
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
@@ -38,16 +41,30 @@ export default function CommitteeMembersSection({ sectionId }: { sectionId: stri
       <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
             Organizing Committee
           </h2>
           <div className="w-24 h-1 bg-purple-500 mx-auto rounded-full mt-4"></div>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
           {committeeMembers.map((member, index) => (
-            <div>
+            <motion.div
+              key={member.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              whileHover={{ scale: 1.03, y: -5 }}
+              className="relative group"
+            >
               {/* Card with glassmorphic effect */}
               <div className="relative h-full">
                 {/* Outer glow */}
@@ -76,7 +93,7 @@ export default function CommitteeMembersSection({ sectionId }: { sectionId: stri
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

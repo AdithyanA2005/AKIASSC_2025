@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode } from 'react';
 import { useLazyLoad } from "@/lib/hooks/useLazyLoad";
 
@@ -21,6 +23,7 @@ export function LazySection({
     triggerOnce: true
   });
   
+  // Use a simple placeholder div when not visible to reduce unnecessary DOM nodes
   return (
     <section
       id={id}
@@ -30,9 +33,13 @@ export function LazySection({
       {isVisible ? (
         children
       ) : (
-        // Placeholder with spinner while section is not visible
-        <div className="flex justify-center items-center" style={{ height: placeholderHeight }}>
-          <div className="w-12 h-12 border-4 border-purple-400/30 border-t-purple-500 rounded-full animate-spin"></div>
+        <div
+          className="flex justify-center items-center"
+          style={{
+            height: placeholderHeight
+          }}
+        >
+          <div className="w-12 h-12 border-4 border-purple-400/30 border-t-purple-500 rounded-full animate-spin" />
         </div>
       )}
     </section>

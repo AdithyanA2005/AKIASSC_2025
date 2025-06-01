@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 
 interface TimeLeft {
@@ -18,33 +18,43 @@ export function CountdownSection({ sectionId }: { sectionId: string }) {
     seconds: 0,
   });
 
-  useEffect(() => {
-    const targetDate = new Date("July 11, 2025 00:00:00").getTime();
+  // Calculate the target date once, outside the effect
+  const targetDate = useMemo(() => {
+    // July 11, 2025
+    return new Date("2025-07-11T00:00:00").getTime();
+  }, []);
 
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
+  // Create a memoized calculation function
+  const calculateTimeLeft = useCallback(() => {
+    const now = new Date().getTime();
+    const difference = targetDate - now;
 
-      if (difference <= 0) {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-
-      setTimeLeft({
+    if (difference > 0) {
+      return {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor(
           (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
         ),
         minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
         seconds: Math.floor((difference % (1000 * 60)) / 1000),
-      });
-    };
+      };
+    } else {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+  }, [targetDate]);
 
-    updateCountdown();
-    const timer = setInterval(updateCountdown, 1000);
+  useEffect(() => {
+    // Update immediately on mount
+    setTimeLeft(calculateTimeLeft());
 
+    // Update every second
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    // Clean up the timer
     return () => clearInterval(timer);
-  }, []);
+  }, [calculateTimeLeft]);
 
   const countdownItems = [
     { label: "Days", value: timeLeft.days },
