@@ -117,7 +117,7 @@ export default function TicketSection({ sectionId }: { sectionId: string }) {
           </table>
           {/* <p className="text-gray-600">Food and accomadation will be provided to all registered participants</p> */}
           <div className="mt-4 text-left text-gray-400 text-[16px]">Food and accomadation will be provided to all registered participants</div>
-          <div className="mt-0.5 text-left text-gray-400 text-[16px]">Early bird offer available till May 31, 2025</div>
+          <div className="mt-0.5 text-left text-gray-400 text-[16px]">Early bird offer available till June 9, 2025</div>
         </div>
       </div>
       
