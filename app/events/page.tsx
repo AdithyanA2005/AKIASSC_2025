@@ -40,11 +40,11 @@ export default function EventsPage() {
             Event Programs
           </h1>
           <div className="w-24 h-1 bg-purple-500 mx-auto rounded-full mt-4"></div>
-          <p className="text-gray-300 mt-6 max-w-2xl mx-auto">
+          {/* <p className="text-gray-300 mt-6 max-w-2xl mx-auto">
             Discover the key events that make AKIASSC 2025 a must-attend conference. 
             Our carefully curated program features workshops, technical sessions, 
             and networking opportunities designed to enhance your skills and knowledge.
-          </p>
+          </p> */}
         </motion.div>
         
         <FeatureGrid data={events} />
