@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Phone } from "lucide-react";
 
-export default function TicketPage({ sectionId }: { sectionId: string }) {
+export default function TicketPage({}) {
   const tickets = [
     { src: "/ticket/1.png", glowColor: "#805a07" },
     { src: "/ticket/2.png", glowColor: "#078058" },
@@ -36,7 +36,6 @@ export default function TicketPage({ sectionId }: { sectionId: string }) {
 
   return (
     <LazySection
-      id={sectionId}
       className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden pt-20"
     >
       <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">

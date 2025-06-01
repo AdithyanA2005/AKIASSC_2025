@@ -26,10 +26,9 @@ const committeeMembers: CommitteeMember[] = [
   { id: 15, name: "Mr. Akhil J Babu", delegation: "Chairman, Food Committee" },
 ];
 
-export default function CommitteeMembersPage({ sectionId }: { sectionId: string }) {
+export default function CommitteeMembersPage() {
   return (
     <div
-      id={sectionId}
       className="min-h-screen py-24 relative overflow-hidden"
     >
       {/* Background Elements */}
