@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { ChevronDown, Sparkles } from "lucide-react";
+import { useEffect, useState, useMemo } from "react";
+import { ChevronDown } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -21,50 +22,62 @@ export function HomeSection({
     setMounted(true);
   }, []);
 
+  // // Memoize particle animations to prevent recreating on each render
+  // const particles = useMemo(
+  //   () =>
+  //     [...Array(50)].map((_, i) => ({
+  //       id: i,
+  //       initial: {
+  //         x: Math.random() * 100 + "vw",
+  //         y: Math.random() * 100 + "vh",
+  //         scale: 0.5,
+  //         opacity: 0.3,
+  //       },
+  //       animate: {
+  //         x: [
+  //           Math.random() * 100 + "vw",
+  //           Math.random() * 100 + "vw",
+  //           Math.random() * 100 + "vw",
+  //         ],
+  //         y: [
+  //           Math.random() * 100 + "vh",
+  //           Math.random() * 100 + "vh",
+  //           Math.random() * 100 + "vh",
+  //         ],
+  //         scale: [0.5, 1, 0.5],
+  //         opacity: [0.3, 0.6, 0.3],
+  //       },
+  //       transition: {
+  //         duration: Math.random() * 10 + 10,
+  //         repeat: Infinity,
+  //         ease: "linear",
+  //         delay: Math.random() * 2,
+  //         times: [0, 0.5, 1],
+  //       },
+  //     })),
+  //   []
+  // );
+
   if (!mounted) return null;
 
   return (
-    <LazySection 
-      id={sectionId} 
+    <LazySection
+      id={sectionId}
       className="relative min-h-screen w-full overflow-hidden"
       placeholderHeight="100vh"
     >
       {/* Particle Background */}
-      <div className="fixed inset-0 w-full h-full">
-        {[...Array(50)].map((_, i) => (
+      {/* <div className="fixed inset-0 w-full h-full">
+        {particles.map((particle) => (
           <motion.div
-            key={i}
+            key={particle.id}
             className="absolute w-3 h-3 bg-purple-500/40 rounded-full"
-            initial={{
-              x: Math.random() * 100 + "vw",
-              y: Math.random() * 100 + "vh",
-              scale: 0.5,
-              opacity: 0.3,
-            }}
-            animate={{
-              x: [
-                Math.random() * 100 + "vw",
-                Math.random() * 100 + "vw",
-                Math.random() * 100 + "vw",
-              ],
-              y: [
-                Math.random() * 100 + "vh",
-                Math.random() * 100 + "vh",
-                Math.random() * 100 + "vh",
-              ],
-              scale: [0.5, 1, 0.5],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              ease: "linear",
-              delay: Math.random() * 2,
-              times: [0, 0.5, 1],
-            }}
+            initial={particle.initial}
+            animate={particle.animate}
+            transition={particle.transition}
           />
         ))}
-      </div>
+      </div> */}
 
       {/* Content Container */}
       <div className="container mx-auto px-4 h-screen flex flex-col">
@@ -166,19 +179,24 @@ export function HomeSection({
               className="relative"
             >
               {/* Button glow effect */}
-              <motion.div 
+              <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-400 rounded-xl blur-lg"
                 initial={{ opacity: 0.4, scale: 1 }}
                 animate={{ opacity: 0.4, scale: 1 }}
-                transition={{ 
+                transition={{
                   opacity: { duration: 0.3 },
-                  scale: { duration: 0.3 }
+                  scale: { duration: 0.3 },
                 }}
               />
-              
+
               <Button
                 className="relative z-10 px-8 py-6 h-3 w-auto text-lg font-medium bg-gradient-to-r from-purple-900/80 to-purple-700/80 hover:from-purple-800/90 hover:to-purple-600/90 border border-purple-400/30 backdrop-blur-md rounded-xl shadow-[0_0_15px_rgba(160,90,255,0.5)] transition-all duration-300"
-                onClick={() => {window.open("https://makemypass.com/event/akiassc25", "_blank")}}
+                onClick={() => {
+                  window.open(
+                    "https://makemypass.com/event/akiassc25",
+                    "_blank"
+                  );
+                }}
               >
                 <span className="mr-2">
                   <Sparkles className="w-5 h-5 text-purple-300" />

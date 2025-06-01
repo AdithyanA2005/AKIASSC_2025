@@ -14,9 +14,9 @@ export default function Home() {
         goToSectionId={ELandingSections.ABOUT}
       />
       <AboutSection sectionId={ELandingSections.ABOUT} />
-      <EventsSection sectionId={ELandingSections.EVENTS} />
-      <CommitteeMembersSection sectionId={ELandingSections.COMMITTEE} />
-      <TicketSection sectionId={ELandingSections.TICKET} />
+      {/* <EventsSection sectionId={ELandingSections.EVENTS} /> */}
+      {/* <CommitteeMembersSection sectionId={ELandingSections.COMMITTEE} /> */}
+      {/* <TicketSection sectionId={ELandingSections.TICKET} /> */}
       <CountdownSection sectionId={ELandingSections.COUNTDOWN} />
     </main>
   );

@@ -18,7 +18,7 @@ export function Header() {
         {/* Logo section - responsive ordering */}
         <div className="flex items-center order-1 md:order-1">
           {/* Main logo remains on left side for all views */}
-          <Link href={`#${ELandingSections.HOME}`}>
+          <Link href={`${ELandingSections.HOME}`}>
             <Image src="/logo.png" alt="AKIASSC Logo" width={80} height={75} priority className="w-[90px] mb-3 md:max-w-full" />
           </Link>
         </div>
@@ -63,7 +63,7 @@ export function Header() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="absolute top-20 border-b border-purple-500/20 backdrop-blur-md bg-[#0e0420]/90 z-40 md:border md:border-purple-500/20 md:rounded-bl-2xl md:shadow-lg md:bg-[#0e0420]/90"
+            className="absolute top-20 border-b border-purple-500/20 backdrop-blur-md bg-[0e0420]/90 z-40 md:border md:border-purple-500/20 md:rounded-bl-2xl md:shadow-lg md:bg-[0e0420]/90"
             style={{ 
               right: 0, 
               width: window?.innerWidth >= 768 ? "300px" : "100%" 
@@ -93,7 +93,7 @@ export function Header() {
                 transition={{ delay: 0.1 }}
               >
                 <Link
-                  href={`#${ELandingSections.HOME}`}
+                  href={`${ELandingSections.HOME}`}
                   className="text-white hover:text-purple-300 block py-2 text-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -104,24 +104,10 @@ export function Header() {
               <motion.div
                 initial={{ opacity: 0, x: 10 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
-              >
-                <Link
-                  href={`#${ELandingSections.ABOUT}`}
-                  className="text-white hover:text-purple-300 block py-2 text-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  About
-                </Link>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
               >
                 <Link
-                  href={`#${ELandingSections.EVENTS}`}
+                  href={`${ELandingSections.EVENTS}`}
                   className="text-white hover:text-purple-300 block py-2 text-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -149,7 +135,7 @@ export function Header() {
                 transition={{ delay: 0.4 }}
               >
                 <Link
-                  href={`#${ELandingSections.COMMITTEE}`}
+                  href={`${ELandingSections.COMMITTEE}`}
                   className="text-white hover:text-purple-300 block py-2 text-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -163,7 +149,7 @@ export function Header() {
                 transition={{ delay: 0.5 }}
               >
                 <Link
-                  href={`#${ELandingSections.TICKET}`}
+                  href={`${ELandingSections.TICKET}`}
                   className="text-white hover:text-purple-300 block py-2 text-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -177,7 +163,7 @@ export function Header() {
                 transition={{ delay: 0.6 }}
               >
                 <Link
-                  href={`#${ELandingSections.COUNTDOWN}`}
+                  href={`${ELandingSections.COUNTDOWN}`}
                   className="text-white hover:text-purple-300 block py-2 text-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >

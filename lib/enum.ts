@@ -1,8 +1,8 @@
 export enum ELandingSections {
-  HOME = "home",
-  ABOUT = "about",
-  EVENTS = "events",
-  COMMITTEE = "committee",
-  COUNTDOWN = "countdown",
-  TICKET = "ticket",
+  HOME = "/",
+  ABOUT = "/#about",
+  EVENTS = "/events",
+  COMMITTEE = "/committe",
+  COUNTDOWN = "/#countdown",
+  TICKET = "/ticket",
 }
