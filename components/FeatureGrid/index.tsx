@@ -4,7 +4,7 @@ import { Event, Activity } from '@/lib/types';
 import DiscordMessage from '@/components/Poster';
 
 interface FeatureGridProps {
-  data: (Event | Activity)[];
+  data: Event[];
   alternateLayout?: boolean;
 }
 

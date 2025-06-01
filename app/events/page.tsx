@@ -20,10 +20,16 @@ const events: Event[] = [
   },
   {
     id: 3,
-    topic: "Technical Sessions",
-    image: "/events/coming-soon.png",
-    description: "Stay tuned for our upcoming technical sessions, where industry experts will share insights on the latest trends and innovations in technology. These sessions are designed to enhance your knowledge and skills, preparing you for the future of tech."
-  }
+    topic: "12-Hour Hackathon",
+    image: "/hackathon.avif",
+    description: "Put your coding skills to the test in our 12-hour hackathon! Collaborate with fellow tech enthusiasts to solve real-world engineering problems using innovative technology solutions. It's a great opportunity to showcase your creativity and technical prowess."
+  },
+  {
+    id: 4,
+    topic: "Industrial Visit",
+    image: "/iv.jpg",
+    description: "Gain insights into how electrical and computer engineering is applied in real-world scenarios by visiting a leading tech company. This visit will provide you with a unique perspective on the industry and its applications."
+  },
 ];
 
 export default function EventsPage() {

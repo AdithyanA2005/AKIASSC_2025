@@ -7,9 +7,7 @@ export interface Event {
 
 export interface Activity {
   id: number;
-  image: string;
   date: string;
   time: string;
   topic: string;
-  description: string;
 }

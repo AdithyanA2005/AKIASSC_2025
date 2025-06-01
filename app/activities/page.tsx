@@ -4,40 +4,99 @@ import { Activity } from "@/lib/types";
 import FeatureGrid from "@/components/FeatureGrid";
 import { motion } from "framer-motion";
 import { LazySection } from "@/components/lazy-section";
+import ActivityGrid from "@/components/ActivitiesGrid";
 
-const activities: Activity[] = [
-  {
-    id: 1,
-    image: "/workshop.jpeg",
-    date: "July 11, 2025",
-    time: "10:00 AM - 1:00 PM",
-    topic: "EV Workshop - Part 1",
-    description: "Theoretical session on Electric Vehicles covering BLDC motors, battery selection, converters, and the fundamentals of EV conversion."
-  },
-  {
-    id: 2,
-    image: "/workshop.jpeg",
-    date: "July 11, 2025",
-    time: "2:00 PM - 5:00 PM",
-    topic: "EV Workshop - Part 2",
-    description: "Hands-on workshop where participants will learn to wire and convert a conventional IC engine bike into a fully functional electric vehicle."
-  },
-  {
-    id: 3,
-    image: "/hackathon.avif",
-    date: "July 12, 2025",
-    time: "9:00 AM - 9:00 PM",
-    topic: "12-Hour Hackathon",
-    description: "Collaborative coding marathon where teams will solve real-world engineering problems using innovative technology solutions."
-  },
-  {
-    id: 4,
-    image: "/iv.jpeg",
-    date: "July 13, 2025",
-    time: "10:00 AM - 4:00 PM",
-    topic: "Industrial Visit",
-    description: "Visit to a leading tech company to gain insights into industrial applications of electrical and computer engineering in real-world scenarios."
-  },
+const activities: Activity[][] = [
+  [
+    {
+      id: 1,
+      date: "July 11, 2025",
+      time: "11:00 AM - 12:30 PM",
+      topic: "Industrial Visit",
+    },
+    {
+      id: 2,
+      date: "July 11, 2025",
+      time: "11:00 AM - 12:30 PM",
+      topic: "Field Trip",
+    },
+    {
+      id: 3,
+      date: "July 11, 2025",
+      time: "4:30 PM - 5:30 PM",
+      topic: "Inaugration Ceremony",
+    },
+    {
+      id: 4,
+      date: "July 11, 2025",
+      time: "6:00 PM - 7:00 PM",
+      topic: "Keynote Address",
+    },
+    {
+      id: 5,
+      date: "July 11, 2025",
+      time: "7:00 PM - 8:00 PM",
+      topic: "Cultural Evening",
+    }
+  ],
+  [
+    {
+      id: 0,
+      date: "July 12, 2025",
+      time: "9:00 AM - 9:00 PM",
+      topic: "12-Hour Hackathon",
+    },
+    {
+      id: 1,
+      date: "July 12, 2025",
+      time: "9:00 AM - 10:45 AM",
+      topic: "Technical Talk",
+    },
+    {
+      id: 2,
+      date: "July 12, 2025",
+      time: "11:00 AM - 12:30 PM",
+      topic: "Panel Discussion"
+    },
+    {
+      id: 3,
+      date: "July 12, 2025",
+      time: "1:30 PM - 5:00 PM",
+      topic: "EV Workshop"
+    },
+    {
+      id: 4,
+      date: "July 12, 2025",
+      time: "1:30 PM - 5:00 PM",
+      topic: "AI Workshop"
+    },
+    {
+      id: 5,
+      date: "July 12, 2025",
+      time: "5:00 PM - 7:00 PM",
+      topic: "IAS YP Event"
+    }
+  ],
+  [
+    {
+      id: 0,
+      date: "July 13, 2025",
+      time: "9:00 AM - 11:00 PM",
+      topic: "Panel Discussion [SPAx Event]",
+    },
+    {
+      id: 1,
+      date: "July 13, 2025",
+      time: "11:15 AM - 12:00 PM",
+      topic: "Talk Session"
+    },
+    {
+      id: 2,
+      date: "July 13, 2025",
+      time: "12:00 PM - 1:00 PM",
+      topic: "Validectory Function"
+    }
+  ]
 ];
 
 export default function ActivitiesPage() {
@@ -50,17 +109,31 @@ export default function ActivitiesPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
+          <h1 className="h-13 text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
             Upcoming Activities
           </h1>
           <div className="w-24 h-1 bg-purple-500 mx-auto rounded-full mt-4"></div>
           <p className="text-gray-300 mt-6 max-w-2xl mx-auto">
-            Explore the exciting activities planned for AKIASSC 2025. From hands-on workshops to tech talks, 
-            there's something for everyone interested in industrial applications and technology.
+            Explore all the exciting activities taking place at AKIASSC 2025 and
+            the time slots for each event.
           </p>
         </motion.div>
-        
-        <FeatureGrid data={activities} />
+        <h1 className="w-full h-14 text-4xl md:text-5xl font-medium bg-gradient-to-r bg-clip-text text-transparent from-purple-500 to-purple-400">
+          Day 1
+        </h1>
+        <ActivityGrid data={activities[0]} />
+
+        <div className="w-[70%] h-1 bg-[#00FFFF] rounded-full mt-2 mb-10 mx-auto" />
+        <h1 className="w-full h-14 text-4xl md:text-5xl font-medium bg-gradient-to-r bg-clip-text text-transparent from-purple-500 to-purple-400">
+          Day 2
+        </h1>
+        <ActivityGrid data={activities[1]} />
+
+        <div className="w-[70%] h-1 bg-[#00FFFF] rounded-full mt-2 mb-10 mx-auto" />
+        <h1 className="w-full h-14 text-4xl md:text-5xl font-medium bg-gradient-to-r bg-clip-text text-transparent from-purple-500 to-purple-400">
+          Day 3
+        </h1>
+        <ActivityGrid data={activities[2]} />
       </LazySection>
     </div>
   );
