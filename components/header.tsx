@@ -156,20 +156,6 @@ export function Header() {
                   Registration
                 </Link>
               </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6 }}
-              >
-                <Link
-                  href={`${ELandingSections.COUNTDOWN}`}
-                  className="text-white hover:text-purple-300 block py-2 text-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Countdown
-                </Link>
-              </motion.div>
             </div>
           </motion.div>
         )}
