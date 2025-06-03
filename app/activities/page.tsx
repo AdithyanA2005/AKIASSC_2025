@@ -48,7 +48,7 @@ export default function EventsPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
+          <h1 className="h-17 text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
             Event Programs
           </h1>
           <div className="w-24 h-1 bg-purple-500 mx-auto rounded-full mt-4"></div>

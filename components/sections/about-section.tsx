@@ -128,7 +128,7 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
                     src={slides[currentSlide].image}
                     alt={slides[currentSlide].title}
                     fill
-                    className="object-contain p-4 transform hover:scale-105 transition-transform duration-700"
+                    className="object-contain px-10 transform hover:scale-105 transition-transform duration-700"
                     priority
                     onError={(e) => {
                       // Fallback if image fails to load
@@ -163,9 +163,11 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
               className="space-y-6 flex flex-col h-full"
             >
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 flex-grow flex items-start h-[300px] lg:h-[600px] overflow-auto">
-                <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                <div className="flex items-center justify-center h-full">
+                  <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                   {slides[currentSlide].content}
-                </p>
+                  </p>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>

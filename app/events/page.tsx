@@ -109,7 +109,7 @@ export default function ActivitiesPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="h-13 text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
+          <h1 className="h-14 text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
             Upcoming Activities
           </h1>
           <div className="w-24 h-1 bg-purple-500 mx-auto rounded-full mt-4"></div>

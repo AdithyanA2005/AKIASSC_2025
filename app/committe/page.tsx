@@ -47,7 +47,7 @@ export default function CommitteeMembersPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
+          <h2 className="h-14 text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
             Organizing Committee
           </h2>
           <div className="w-24 h-1 bg-purple-500 mx-auto rounded-full mt-4"></div>
