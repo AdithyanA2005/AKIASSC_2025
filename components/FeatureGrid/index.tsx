@@ -8,6 +8,15 @@ interface FeatureGridProps {
   alternateLayout?: boolean;
 }
 
+const renderWithLineBreaks = (text: string) => {
+  return text.split('\n').map((line, i) => (
+    <React.Fragment key={i}>
+      {line}
+      {i < text.split('\n').length - 1 && <br />}
+    </React.Fragment>
+  ));
+};
+
 export default function FeatureGrid({ data, alternateLayout = true }: FeatureGridProps) {
   return (
     <div className="container mx-auto px-4 py-12">
@@ -40,8 +49,8 @@ export default function FeatureGrid({ data, alternateLayout = true }: FeatureGri
                 <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
                   {item.topic}
                 </h3>
-                <p className="text-gray-300 text-lg">
-                  {item.description}
+                <p className="text-gray-300 text-lg whitespace-pre-line">
+                  {renderWithLineBreaks(item.description)}
                 </p>
               </div>
             </FadeOnSee>
