@@ -117,7 +117,7 @@ export function Header() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="absolute top-20 border-b border-purple-500/20 backdrop-blur-md bg-[0e0420]/90 z-40 md:border md:border-purple-500/20 md:rounded-bl-2xl md:shadow-lg md:bg-[0e0420]/90"
+            className="absolute top-20 border-b border-purple-500/20 backdrop-blur-md bg-[#0e0420]/90 z-40 md:border md:border-purple-500/20 md:rounded-bl-2xl md:shadow-lg md:bg-[0e0420]/90"
             style={{
               right: 0,
               width: window?.innerWidth >= 768 ? "300px" : "100%",
