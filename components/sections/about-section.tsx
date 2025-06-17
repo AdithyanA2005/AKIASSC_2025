@@ -84,22 +84,6 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
             </button>
           </div>
 
-          {/* Mobile Navigation - Moved below for better spacing */}
-          <div className="flex justify-center gap-4 mt-8 lg:hidden absolute -bottom-16 left-0 right-0">
-            <button
-              onClick={prevSlide}
-              className="p-3 rounded-full bg-purple-900/50 hover:bg-purple-600 transition-colors border border-purple-400/30 shadow-lg"
-            >
-              <ChevronLeft className="text-white w-5 h-5" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="p-3 rounded-full bg-purple-900/50 hover:bg-purple-600 transition-colors border border-purple-400/30 shadow-lg"
-            >
-              <ChevronRight className="text-white w-5 h-5" />
-            </button>
-          </div>
-
           {/* Image Section */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -175,17 +159,34 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
         </div>
 
         {/* Slide Indicators - Added more bottom margin for mobile layout */}
-        <div className="flex justify-center mt-8 lg:mt-8 mb-8 lg:mb-0 gap-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentSlide ? "bg-purple-400 w-6" : "bg-purple-700/50"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+        {/* Mobile Navigation - Moved below for better spacing */}
+        <div className="flex justify-evenly items-center mt-8 lg:mt-8 mb-8 lg:mb-0 ">
+          <button
+            onClick={prevSlide}
+            className="p-3 rounded-full lg:hidden bg-purple-900/50 hover:bg-purple-600 transition-colors border border-purple-400/30 shadow-lg"
+          >
+            <ChevronLeft className="text-white w-5 h-5" />
+          </button>
+
+          <div className="flex justify-center gap-2">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  index === currentSlide ? "bg-purple-400 w-6" : "bg-purple-700/50"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={nextSlide}
+            className="p-3 rounded-full lg:hidden bg-purple-900/50 hover:bg-purple-600 transition-colors border border-purple-400/30 shadow-lg"
+          >
+            <ChevronRight className="text-white w-5 h-5" />
+          </button>
         </div>
       </div>
     </LazySection>
