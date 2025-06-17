@@ -10,6 +10,14 @@ import { motion, AnimatePresence } from "framer-motion";
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const menuEntities = [
+    { title: "Home", link: ELandingSections.HOME },
+    { title: "Events", link: ELandingSections.EVENTS },
+    { title: "Activities", link: "/activities" },
+    { title: "Committee", link: ELandingSections.COMMITTEE },
+    { title: "Registration", link: ELandingSections.TICKET },
+  ];
+
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
@@ -132,75 +140,22 @@ export function Header() {
             transition={{ duration: 0.3 }}
           >
             <div className="py-6 px-8 flex flex-col space-y-4">
-              <motion.div
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 }}
-              >
-                <Link
-                  href={`${ELandingSections.HOME}`}
-                  className="text-white hover:text-purple-300 block py-2 text-lg"
-                  onClick={() => setIsMenuOpen(false)}
+              {menuEntities.map((entity, index) => (
+                <motion.div
+                  key={`nav-menu-item-${index}`}
+                  initial={{ opacity: 0, x: 10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.09 * (index + 1) }}
                 >
-                  Home
-                </Link>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 }}
-              >
-                <Link
-                  href={`${ELandingSections.EVENTS}`}
-                  className="text-white hover:text-purple-300 block py-2 text-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Events
-                </Link>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.05 }}
-              >
-                <Link
-                  href="/activities"
-                  className="text-white hover:text-purple-300 block py-2 text-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Activities
-                </Link>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 }}
-              >
-                <Link
-                  href={`${ELandingSections.COMMITTEE}`}
-                  className="text-white hover:text-purple-300 block py-2 text-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Committee
-                </Link>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5 }}
-              >
-                <Link
-                  href={`${ELandingSections.TICKET}`}
-                  className="text-white hover:text-purple-300 block py-2 text-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Registration
-                </Link>
-              </motion.div>
+                  <Link
+                    href={entity.link}
+                    className="text-white hover:text-purple-300 block py-2 text-lg"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {entity.title}
+                  </Link>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         )}
