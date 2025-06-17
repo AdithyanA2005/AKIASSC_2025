@@ -8,28 +8,32 @@ import { LazySection } from "@/components/lazy-section";
 
 export function AboutSection({ sectionId }: { sectionId: string }) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   const slides = [
     {
       title: "About AKIASSC",
       image: "/logo.png",
-      content: "AKIASSC, the All Kerala Industry Applications Society Student Conclave, provides a platform connecting engineering students with industry experts. This initiative by IEEE IA/IE/PELS Joint Chapter Kerala bridges academic learning with practical applications, offering workshops and networking opportunities to enhance students' technical skills and career prospects."
+      content:
+        "AKIASSC, the All Kerala Industry Applications Society Student Conclave, provides a platform connecting engineering students with industry experts. This initiative by IEEE IA/IE/PELS Joint Chapter Kerala bridges academic learning with practical applications, offering workshops and networking opportunities to enhance students' technical skills and career prospects.",
     },
     {
       title: "About IEEE IA/IE/PELS Jt. Chapter Kerala",
       image: "/jt-chpter-logo.png",
-      content: "The IEEE IA/IE/PELS Joint Chapter Kerala unites three IEEE societies focused on industrial applications, electronics, and power systems. It serves as a hub for professionals and students, promoting knowledge exchange through workshops and technical sessions. Members gain access to cutting-edge research and networking opportunities with industry leaders."
+      content:
+        "The IEEE IA/IE/PELS Joint Chapter Kerala unites three IEEE societies focused on industrial applications, electronics, and power systems. It serves as a hub for professionals and students, promoting knowledge exchange through workshops and technical sessions. Members gain access to cutting-edge research and networking opportunities with industry leaders.",
     },
     {
       title: "About UKFCET",
       image: "/college.jpg",
-      content: "UKF College of Engineering and Technology excels in technical education with state-of-the-art facilities and experienced faculty. The college offers diverse engineering programs that blend theoretical knowledge with practical skills. UKFCET's focus on holistic development and innovation prepares graduates to address real-world challenges and advance in technological fields."
+      content:
+        "UKF College of Engineering and Technology excels in technical education with state-of-the-art facilities and experienced faculty. The college offers diverse engineering programs that blend theoretical knowledge with practical skills. UKFCET's focus on holistic development and innovation prepares graduates to address real-world challenges and advance in technological fields.",
     },
     {
       title: "About IEEE SB UKFCET",
       image: "/college.jpg",
-      content: "IEEE Student Branch at UKF College of Engineering and Technology (UKFCET), established in 2016, promotes technological innovation and student development through events, workshops, and lectures. It actively engages in IEEE activities, recently hosting major programs like the All Kerala IAS Student Conclave (AKIASSC) 2025. The branch stays connected with students via platforms like Instagram and LinkedIn."
-    }
+      content:
+        "IEEE Student Branch at UKF College of Engineering and Technology (UKFCET), established in 2016, promotes technological innovation and student development through events, workshops, and lectures. It actively engages in IEEE activities, recently hosting major programs like the All Kerala IAS Student Conclave (AKIASSC) 2025. The branch stays connected with students via platforms like Instagram and LinkedIn.",
+    },
   ];
 
   const nextSlide = () => {
@@ -41,10 +45,7 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
   };
 
   return (
-    <LazySection
-      id={sectionId}
-      className="container mx-auto px-4 py-24"
-    >
+    <LazySection id={sectionId} className="container mx-auto px-4 py-24">
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -64,7 +65,7 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch relative">
           {/* Navigation Buttons */}
           <div className="absolute -left-16 top-1/2 -translate-y-1/2 z-20 lg:block hidden">
-            <button 
+            <button
               onClick={prevSlide}
               className="p-3 rounded-full bg-purple-900/50 hover:bg-purple-600 transition-colors border border-purple-400/30 shadow-lg"
               aria-label="Previous slide"
@@ -72,9 +73,9 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
               <ChevronLeft className="text-white w-5 h-5" />
             </button>
           </div>
-          
+
           <div className="absolute -right-16 top-1/2 -translate-y-1/2 z-20 lg:block hidden">
-            <button 
+            <button
               onClick={nextSlide}
               className="p-3 rounded-full bg-purple-900/50 hover:bg-purple-600 transition-colors border border-purple-400/30 shadow-lg"
               aria-label="Next slide"
@@ -82,17 +83,17 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
               <ChevronRight className="text-white w-5 h-5" />
             </button>
           </div>
-          
+
           {/* Mobile Navigation - Moved below for better spacing */}
           <div className="flex justify-center gap-4 mt-8 lg:hidden absolute -bottom-16 left-0 right-0">
-            <button 
-              onClick={prevSlide} 
+            <button
+              onClick={prevSlide}
               className="p-3 rounded-full bg-purple-900/50 hover:bg-purple-600 transition-colors border border-purple-400/30 shadow-lg"
             >
               <ChevronLeft className="text-white w-5 h-5" />
             </button>
-            <button 
-              onClick={nextSlide} 
+            <button
+              onClick={nextSlide}
               className="p-3 rounded-full bg-purple-900/50 hover:bg-purple-600 transition-colors border border-purple-400/30 shadow-lg"
             >
               <ChevronRight className="text-white w-5 h-5" />
@@ -165,14 +166,14 @@ export function AboutSection({ sectionId }: { sectionId: string }) {
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 flex-grow flex items-start h-[300px] lg:h-[600px] overflow-auto">
                 <div className="flex items-center justify-center h-full">
                   <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-                  {slides[currentSlide].content}
+                    {slides[currentSlide].content}
                   </p>
                 </div>
               </div>
             </motion.div>
           </AnimatePresence>
         </div>
-        
+
         {/* Slide Indicators - Added more bottom margin for mobile layout */}
         <div className="flex justify-center mt-8 lg:mt-8 mb-8 lg:mb-0 gap-2">
           {slides.map((_, index) => (
