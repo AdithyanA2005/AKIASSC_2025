@@ -4,11 +4,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { ELandingSections } from "@/lib/enum";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useOutsideClick } from "@/lib/hooks/use-outside-click";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // To close the menu when clicked outsite the menu
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  useOutsideClick(menuRef, () => {
+    setIsMenuOpen(false);
+  });
 
   const menuEntities = [
     { title: "Home", link: ELandingSections.HOME },
@@ -117,6 +124,7 @@ export function Header() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
+            ref={menuRef}
             className="absolute top-20 border-b border-purple-500/20 backdrop-blur-md bg-[#0e0420]/90 z-40 md:border md:border-purple-500/20 md:rounded-bl-2xl md:shadow-lg md:bg-[0e0420]/90"
             style={{
               right: 0,
