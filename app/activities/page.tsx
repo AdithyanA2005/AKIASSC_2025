@@ -27,14 +27,14 @@ const events: Event[] = [
   {
     id: 4,
     topic: "12-Hour Hackathon",
-    image: "/hackathon.avif",
+    image: "/hackathon.jpg",
     description: "Put your coding skills to the test in our 12-hour hackathon! Collaborate with fellow tech enthusiasts to solve real-world engineering problems using innovative technology solutions. It's a great opportunity to showcase your creativity and technical prowess."
   },
   {
     id: 5,
     topic: "Industrial Visit",
     image: "/iv.jpg",
-    description: "Gain insights into how electrical and computer engineering is applied in real-world scenarios by visiting a leading tech company. This visit will provide you with a unique perspective on the industry and its applications."
+    description: "Step inside one of India’s top tech powerhouses – UST – during AKIASSC 2025!\nExperience the pulse of real-time innovation, explore futuristic tech spaces, and engage with industry leaders who are shaping the digital future.\nWitness cutting-edge technologies in action\n🔹 Gain first-hand insights from tech professionals\n🔹 Enhance your knowledge beyond the textbook\n🔹 Boost your resume with real-world exposure"
   },
 ];
 
