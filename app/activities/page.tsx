@@ -36,6 +36,12 @@ const events: Event[] = [
     image: "/iv.jpg",
     description: "Step inside one of India’s top tech powerhouses – UST – during AKIASSC 2025!\nExperience the pulse of real-time innovation, explore futuristic tech spaces, and engage with industry leaders who are shaping the digital future.\nWitness cutting-edge technologies in action\n🔹 Gain first-hand insights from tech professionals\n🔹 Enhance your knowledge beyond the textbook\n🔹 Boost your resume with real-world exposure"
   },
+  {
+    id: 6,
+    topic: "Talk Session",
+    image: "/talk1.jpg",
+    description: "We are thrilled to have Mr. Srikanth Pillai, Chair, IAS CMD, joining us as a speaker at the All Kerala IAS Students Conclave (AKIASSC) 2025!\nTopic: IAS Programs and Benefits\nExplore the vast landscape of opportunities, resources, and professional advantages offered by IEEE IAS."
+  },
 ];
 
 export default function EventsPage() {
