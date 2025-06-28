@@ -42,6 +42,12 @@ const events: Event[] = [
     image: "/talk1.jpg",
     description: "We are thrilled to have Mr. Srikanth Pillai, Chair, IAS CMD, joining us as a speaker at the All Kerala IAS Students Conclave (AKIASSC) 2025!\nTopic: IAS Programs and Benefits\nExplore the vast landscape of opportunities, resources, and professional advantages offered by IEEE IAS."
   },
+  {
+    id: 7,
+    topic: "Keynote Address",
+    image: "/talk2.jpg",
+    description: "Get ready to be inspired by a visionary leader shaping the future of innovation!\n\n🎙 Sri. Anoop P Ambika \n👔 CEO, Kerala Startup Mission \n📢 Keynote Topic: Tech 2030 – What Could Happen in the Next 5 Years \nJoin us as he explores the evolving tech landscape and offers powerful insights into the next big leap in innovation and entrepreneurship."
+  }
 ];
 
 export default function EventsPage() {
