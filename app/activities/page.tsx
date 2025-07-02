@@ -47,6 +47,18 @@ const events: Event[] = [
     topic: "Keynote Address",
     image: "/talk2.jpg",
     description: "Get ready to be inspired by a visionary leader shaping the future of innovation!\n\n🎙 Sri. Anoop P Ambika \n👔 CEO, Kerala Startup Mission \n📢 Keynote Topic: Tech 2030 – What Could Happen in the Next 5 Years \nJoin us as he explores the evolving tech landscape and offers powerful insights into the next big leap in innovation and entrepreneurship."
+  },
+  {
+    id: 8,
+    topic: "Keynote Address",
+    image:"/keynote1.jpg",
+    description: "We’re thrilled to announce that Sri. Mohammed Sajin S, Chief Growth Officer at Arcite Educational Solutions Pvt. Ltd., will be joining us as a Keynote Speaker at AKIASSC 2025!\n\n🌐 Topic: Internet of Energy (IoE) – Explore how digital innovation is reshaping the energy sector for a smarter, sustainable world."
+  },
+  {
+    id: 9,
+    topic: "Keynote address",
+    image:"/keynote2.jpg",
+    description: "🎙 Keynote Speaker:\n👨‍💻 Sri. Rasic A Azeez \nCyber Security Engineer – Kerala State IT Mission\n\n💡 Topic : SafeTech Campaign: Cybersecurity for Engineering Minds\n🔐 Learn from a leading expert how to safeguard digital frontiers and build a secure tech future!"
   }
 ];
 
