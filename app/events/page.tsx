@@ -17,7 +17,7 @@ const activities: Activity[][] = [
     {
       id: 2,
       date: "July 11, 2025",
-      time: "11:00 AM - 12:30 PM",
+      time: "12:30 PM - 1:15 PM",
       topic: "Field Trip",
     },
     {
@@ -49,32 +49,44 @@ const activities: Activity[][] = [
     {
       id: 1,
       date: "July 12, 2025",
-      time: "9:00 AM - 10:45 AM",
-      topic: "Technical Talk",
+      time: "9:00 AM - 9:45 AM",
+      topic: "Technical Talk 1",
     },
     {
       id: 2,
+      date: "July 12, 2025",
+      time: "10:00 AM - 10:45 AM",
+      topic: "Technical Talk 2",
+    },
+    {
+      id: 3,
       date: "July 12, 2025",
       time: "11:00 AM - 12:30 PM",
       topic: "Panel Discussion"
     },
     {
-      id: 3,
+      id: 4,
       date: "July 12, 2025",
       time: "1:30 PM - 5:00 PM",
       topic: "EV Workshop"
     },
     {
-      id: 4,
+      id: 5,
       date: "July 12, 2025",
       time: "1:30 PM - 5:00 PM",
       topic: "AI Workshop"
     },
     {
-      id: 5,
+      id: 6,
       date: "July 12, 2025",
       time: "5:00 PM - 7:00 PM",
       topic: "IAS YP Event"
+    },
+    {
+      id: 7,
+      date: "July 12, 2025",
+      time: "7:00 PM - 8:30 PM",
+      topic: "Cultural Evening"
     }
   ],
   [
