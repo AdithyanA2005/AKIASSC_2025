@@ -11,7 +11,7 @@ export default function TicketPage({}) {
     { src: "/ticket/3.png", glowColor: "#660342" },
   ];
 
-  const useEarlyBird = true;
+  const useEarlyBird = false;
   const taxRate = 0.0604285; // Placeholder tax rate (18%)
   const platformFee = 0; // Placeholder platform fee in rupees
 
