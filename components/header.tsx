@@ -28,7 +28,7 @@ export function Header() {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
-    <header className="border-b border-purple-500/20 backdrop-blur-sm h-20 fixed top-0 left-0 right-0 z-50">
+    <header className="border-b border-purple-500/20 backdrop-blur-sm h-32 md:h-20 fixed top-0 left-0 right-0 z-50">
       <nav className="w-full mx-auto flex items-center justify-between py-4 px-4">
         {/* Logo section - responsive ordering */}
         <div className="flex items-center order-1 md:order-1">
@@ -72,35 +72,55 @@ export function Header() {
               priority
               className="h-[50px] w-auto"
             />
+            <Image
+              src="/ieee-htb.webp"
+              alt="IEEE Logo"
+              width={90}
+              height={45}
+              priority
+              className="h-[50px] w-auto"
+            />
           </div>
         </div>
 
         {/* Mobile logos (compressed) */}
-        <div className="flex md:hidden items-center space-x-2 order-2">
-          <Image
-            src="/ieee-logo.png"
-            alt="IEEE Logo"
-            width={70}
-            height={35}
-            priority
-            className="h-[25px] w-auto"
-          />
-          <Image
-            src="/ukf-ieee.png"
-            alt="UKF IEEE Logo"
-            width={70}
-            height={35}
-            priority
-            className="h-[35px] w-auto"
-          />
-          <Image
-            src="/jt-chpter-logo.png"
-            alt="JT Chapter Logo"
-            width={110}
-            height={35}
-            priority
-            className="h-[25px] w-auto"
-          />
+        <div className="flex md:hidden flex-col items-center space-y-2 order-2">
+          <div className="flex items-center space-x-2">
+            <Image
+              src="/ieee-logo.png"
+              alt="IEEE Logo"
+              width={70}
+              height={35}
+              priority
+              className="h-[25px] w-auto"
+            />
+            <Image
+              src="/ukf-ieee.png"
+              alt="UKF IEEE Logo"
+              width={70}
+              height={35}
+              priority
+              className="h-[35px] w-auto"
+            />
+          </div>
+          <div className="flex items-center space-x-2">
+            <Image
+              src="/jt-chpter-logo.png"
+              alt="JT Chapter Logo"
+              width={110}
+              height={35}
+              priority
+              className="h-[35px] w-auto"
+            />
+            <Image
+              src="/ieee-htb.webp"
+              alt="IEEE Logo"
+              width={110}
+              height={55}
+              priority
+              className="h-[50px] w-auto"
+            />
+          </div>
         </div>
 
         {/* Menu button - now for both mobile and desktop */}
@@ -125,7 +145,7 @@ export function Header() {
         {isMenuOpen && (
           <motion.div
             ref={menuRef}
-            className="absolute top-20 border-b border-purple-500/20 backdrop-blur-md bg-[#0e0420]/90 z-40 md:border md:border-purple-500/20 md:rounded-bl-2xl md:shadow-lg md:bg-[0e0420]/90"
+            className="absolute top-32 md:top-20 border-b border-purple-500/20 backdrop-blur-md bg-[#0e0420]/90 z-40 md:border md:border-purple-500/20 md:rounded-bl-2xl md:shadow-lg md:bg-[0e0420]/90"
             style={{
               right: 0,
               width: window?.innerWidth >= 768 ? "300px" : "100%",
